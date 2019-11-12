@@ -1,6 +1,8 @@
 # lorem.js 
 made with ❤ by \[A. Elzahaby [egy.js](https://www.instagram.com/egy.js/)\]
 
+DEMO: https://el3zahaby.github.io/lorem.JS/
+
 description: how to use it and examples
 ---
 
