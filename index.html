@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Lorem js | dynamic your Lorem ( dump string ) </title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/shades-of-purple.min.css" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/shades-of-purple.min.css"/>
     <style>
-        .javascript{
+        .javascript {
             color: #fff !important;
         }
     </style>
@@ -23,9 +24,9 @@
 <div id='content'>
     <h1 id="loremjs">lorem.js</h1>
     <p>made with ❤ by [A. Elzahaby <a href="https://www.instagram.com/egy.js/">egy.js</a>]</p>
-    <h6 id="description-how-to-use-it-and-examples">description: how to use it and examples</h6>
-    <h4 id="getting-started">Getting Started</h4>
-    <h5 id="usage">Usage:</h5>
+    <h4 id="description-how-to-use-it-and-examples">description: how to use it and examples</h4>
+    <h1 id="getting-started">Getting Started</h1>
+    <h2 id="usage">Usage:</h2>
     <p><strong>lorem.js</strong> works with Jquery so you should import it first,</p>
     <p>you can also use the <strong>CDN</strong></p>
     <h3 id="import--local-">IMPORT [ LOCAL ]</h3>
@@ -45,7 +46,37 @@
     });
 &lt;/script&gt;
 </code></pre>
+    <div>
+        <!--    //////////////-->
+        <h2 id="example-">Example :</h2>
 
+        <label>example 1</label>
+        <textarea rows="5" class="lorem-1 form-control"></textarea>
+        <div class="btn-group btn-block pt-3">
+            <button class="test btn btn-info" value="rand">random length</button>
+            <button class="test btn btn-info" value="one">option 'one'</button>
+            <button class="test btn btn-info" value="two">option 'two'</button>
+            <button class="test btn btn-info" value="three">option 'three'</button>
+            <button class="test btn btn-info" value="full">option 'full' [446 character]</button>
+        </div>
+        <label>or you could set a
+            length number</label>
+        <input class="form-control test" type="number" placeholder="length" value="30">
+
+
+        <div>
+            <h4>Result Code:</h4>
+            <pre><code class="html language-html">&lt;p class="lorem"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+    $('.lorem').Lorem({
+        "length" : "<span class="test-length hljs-string">rand</span>" // defult :  {"length" : "rand"}
+    });
+&lt;/script&gt;
+</code></pre>
+
+        </div>
+    </div>
     <h2 id="options-">Options :</h2>
     <h4 id="description-here-you-will-find-the-options-that-you-can-use">description: here you will find the options
         that you can use</h4>
@@ -69,7 +100,6 @@
     </table>
 
 
-
 </div>
 
 <!--  script-->
@@ -80,7 +110,7 @@
     $('.lorem-1').Lorem();
     $('.test').bind('click keyup', function () {
         $('.lorem-1').Lorem({
-            "length" : this.value // defult :  {"length" : "rand"}
+            "length": this.value // defult :  {"length" : "rand"}
         });
         $('.test-length').html(this.value);
     });
