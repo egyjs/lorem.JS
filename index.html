@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lorem js | dynamic your Lorem ( dump string ) </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/shades-of-purple.min.css" />
+    <style>
+        .javascript{
+            color: #fff !important;
+        }
+    </style>
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.16.2/build/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <link rel="stylesheet" href="lib/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/gh-style.css">
+
+
+</head>
+<body>
+
+<div id='content'>
+    <h1 id="loremjs">lorem.js</h1>
+    <p>made with ❤ by [A. Elzahaby <a href="https://www.instagram.com/egy.js/">egy.js</a>]</p>
+    <h6 id="description-how-to-use-it-and-examples">description: how to use it and examples</h6>
+    <h4 id="getting-started">Getting Started</h4>
+    <h5 id="usage">Usage:</h5>
+    <p><strong>lorem.js</strong> works with Jquery so you should import it first,</p>
+    <p>you can also use the <strong>CDN</strong></p>
+    <h3 id="import--local-">IMPORT [ LOCAL ]</h3>
+    <pre><code class="html language-html">&lt;script src="js/jquery.js"&gt;&lt;/script&gt;
+&lt;script src="js/lorem.js"&gt;&lt;/script&gt;
+</code></pre>
+    <h3 id="import--cdn-">IMPORT [ CDN ]</h3>
+    <pre><code class="html language-html">&lt;script src="https://code.jquery.com/jquery-3.4.1.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.jsdelivr.net/gh/el3zahaby/lorem.JS/lorem.js"&gt;&lt;/script&gt;
+</code></pre>
+    <p>Once you're Import the <code>js</code> you will be able to make it work with simple lines</p>
+    <pre><code class="html language-html">&lt;p class="lorem-1"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+    $('.lorem-1').Lorem({
+        "length" : "" // defult :  {"length" : "rand"}
+    });
+&lt;/script&gt;
+</code></pre>
+
+    <h2 id="options-">Options :</h2>
+    <h4 id="description-here-you-will-find-the-options-that-you-can-use">description: here you will find the options
+        that you can use</h4>
+    <h1 id="options-and-api">Options And API</h1>
+    <table>
+        <thead>
+        <tr>
+            <th style="text-align:left;">KEY</th>
+            <th style="text-align:left;">value type</th>
+            <th style="text-align:left;">Example</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td style="text-align:left;">length</td>
+            <td style="text-align:left;">string or integer</td>
+            <td style="text-align:left;">you can use one of <code>[one,two,three,full,rand]</code> or you could set a
+                length number, Ex: <code>30</code></td>
+        </tr>
+        </tbody>
+    </table>
+
+
+
+</div>
+
+<!--  script-->
+<script src="lib/jquery-3.4.1.min.js"></script>
+<script src="dist/lorem.js"></script>
+
+<script>
+    $('.lorem-1').Lorem();
+    $('.test').bind('click keyup', function () {
+        $('.lorem-1').Lorem({
+            "length" : this.value // defult :  {"length" : "rand"}
+        });
+        $('.test-length').html(this.value);
+    });
+
+
+</script>
+</body>
+</html>
